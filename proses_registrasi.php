@@ -8,12 +8,12 @@ if (isset($_POST['submit'])) {
 	$konfirmasi_password 	= isset($_POST['konfirmasi_password']) ? md5($_POST['konfirmasi_password']) : "";
 
 	if($password == $konfirmasi_password){
-		$query = "INSERT INTO `user`(`username`, `password`, `nama`) VALUES ('$nama','$username','$password')";
+		$query = "INSERT INTO `user`(`username`, `password`, `nama`) VALUES ('$username','$password','$nama')";
 		$query_success = mysqli_query($conn, $query);
 		if ($query_success) {
 			$_SESSION['username'] = $username;
 			$_SESSION['nama'] = $nama;
-			header('location: beranda.php');
+			header('location: login.php');
 		}
 	} else {
 		$_SESSION['pesan_error_registrasi'] = "Konfirmasi Password Salah!";

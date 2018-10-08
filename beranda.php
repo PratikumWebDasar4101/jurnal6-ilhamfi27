@@ -16,52 +16,26 @@ $nama = $_SESSION['nama'];
 			<table>
 				<tr>
 					<td valign="top">NIM</td>
-					<td><input type="text" name="nim" pattern="[0-9]{10}" title="Harus 10 Digit" required></td>
+					<td><input type="text" name="nim" required></td>
 				</tr>
 				<tr>
 					<td valign="top">Nama</td>
-					<td><input type="text" name="nama" pattern="[A-Za-z ]{1,25}" title="Nama Harus Lebih Dari 1 Karakter dan Kurang Dari 25 Karakter dan Tidak Mengandung Angka" required></td>
+					<td><input type="text" name="nama" required></td>
 				</tr>
 				<tr>
 					<td valign="top">Kelas</td>
-					<td><input type="email" name="email" required></td>
+					<td>
+						<input type="radio" name="kelas" value="D3MI4101"> D3MI4101<br>
+						<input type="radio" name="kelas" value="D3MI4102"> D3MI4102<br>
+						<input type="radio" name="kelas" value="D3MI4103"> D3MI4103<br>
+						<input type="radio" name="kelas" value="D3MI4104"> D3MI4104
+					</td>
 				</tr>
 				<tr>
 					<td valign="top">Jenis Kelamin</td>
 					<td>
-						<input type="radio" name="jenis_kelamin" value="Laki-Laki"> Laki-Laki<br>
-						<input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
-					</td>
-				</tr>
-				<tr>
-					<td valign="top">Program Studi</td>
-					<td>
-						<select name="program_studi">
-							<option value="">-- Program Studi --</option>
-							<option value="Manajemem Informatika">Manajemem Informatika</option>
-							<option value="Manajemen Pemasaran">Manajemen Pemasaran</option>
-							<option value="Perhotelan">Perhotelan</option>
-							<option value="Komputerisasi Akuntansi">Komputerisasi Akuntansi</option>
-							<option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
-							<option value="Teknik Informatika">Teknik Informatika</option>
-							<option value="Teknik Komputer">Teknik Komputer</option>
-							<option value="Sistem Multimedia">Sistem Multimedia</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td valign="top">Fakultas</td>
-					<td>
-						<select name="fakultas">
-							<option value="">-- Fakultas --</option>
-							<option value="FIT">FIT</option>
-							<option value="FKB">FKB</option>
-							<option value="FEB">FEB</option>
-							<option value="FIK">FIK</option>
-							<option value="FTE">FTE</option>
-							<option value="FRI">FRI</option>
-							<option value="FIF">FIF</option>
-						</select>
+						<input type="radio" name="jenis_kelamin" value="L"> Laki-Laki<br>
+						<input type="radio" name="jenis_kelamin" value="P"> Perempuan
 					</td>
 				</tr>
 				<tr>
@@ -81,9 +55,24 @@ $nama = $_SESSION['nama'];
 					</td>
 				</tr>
 				<tr>
-					<td valign="top">Foto</td>
+					<td valign="top">Fakultas</td>
 					<td>
-						<input type="file" name="photo">
+						<select name="fakultas">
+							<option value="">-- Fakultas --</option>
+							<option value="FIT">FIT</option>
+							<option value="FKB">FKB</option>
+							<option value="FEB">FEB</option>
+							<option value="FIK">FIK</option>
+							<option value="FTE">FTE</option>
+							<option value="FRI">FRI</option>
+							<option value="FIF">FIF</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">Alamat</td>
+					<td>
+						<textarea name="alamat"></textarea>
 					</td>
 				</tr>
 				<tr>
