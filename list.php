@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<?php 
-		$query ="SELECT `nim`, `nama`, `kelas`, `jenis_kelamin`, `hobi`, `fakultas`, `alamat` FROM `mahasiswa` WHERE 1";
+		$query ="SELECT `id`, `nim`, `nama`, `kelas`, `jenis_kelamin`, `hobi`, `fakultas`, `alamat` FROM `mahasiswa` WHERE 1";
 		$result = mysqli_query($conn,$query);
 		if (mysqli_num_rows($result)>0) {
 		?>
@@ -19,6 +19,7 @@
 				<th>Hobi</th>
 				<th>Fakultas</th>
 				<th>Alamat</th>
+				<th>Aksi</th>
 			</thead>
 			<tbody>
 			<?php 
@@ -32,6 +33,7 @@
 			 		<td><?php echo $data['hobi']; ?></td>
 			 		<td><?php echo $data['fakultas']; ?></td>
 			 		<td><?php echo $data['alamat']; ?></td>
+			 		<td><a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a></td>
 			 	</tr>
 			 	<?php
 		 		}
